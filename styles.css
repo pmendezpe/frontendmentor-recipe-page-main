@@ -1,0 +1,147 @@
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-stone100: hsl(30, 54%, 90%);
+    --color-stone150: hsl(30, 18%, 87%);
+    --color-stone600: hsl(30, 10%, 34%);
+    --color-stone900: hsl(24, 5%, 18%);
+    --color-brown: hsl(14, 45%, 36%);
+    --color-light-rose: hsl(330, 100%, 98%);
+    --color-rose: hsl(332, 51%, 32%);
+    --color-background-page: hsl(18, 24%, 86%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Outfit", sans-serif;
+    font-size: 100%;
+    color: var(--color-stone600);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.imgDish {
+    width: 24rem;
+    height: 11rem;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--color-stone900);
+}
+
+h2 {
+    color: var(--color-brown);
+}
+
+.infoRecipe {
+    width: 80%;
+}
+
+li {
+    padding-left: 0.75rem;
+    line-height: 1.5;
+}
+
+.preparation {
+    background-color: var(--color-light-rose);
+    padding: 0.25rem;
+}
+
+.preparation h3 {
+    color: var(--color-rose);
+    margin-left: 1rem;
+}
+
+.preparation li::marker {
+    color: var(--color-rose);
+}
+
+.ingredients li::marker {
+    color: var(--color-brown);
+}
+
+.instructions li::marker {
+    color: var(--color-brown);
+    font-weight: bold;
+}
+
+hr {
+    height: 0.1rem;
+    background-color: var(--color-stone150);
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 0.75rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-stone150);
+}
+
+.quantity {
+    font-weight: bold;
+    color: var(--color-brown);
+}
+
+footer {
+    margin: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 1440px) {
+    html {
+        background-color: var(--color-background-page);
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .recipe {
+        background-color: var(--color-white);
+        max-width: 42rem;
+        margin-top: 4rem;
+        border-radius: 0.75rem;
+        padding: 1rem;
+    }
+
+    .infoRecipe {
+        width: 90%;
+    }
+
+    .imgDish{
+        width: 90%;
+        height: auto;
+        margin-top: 1.5rem;
+        border-radius: 0.75rem;
+    }
+}
